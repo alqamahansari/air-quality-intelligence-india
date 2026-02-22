@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+
+  api:
+    build: .
+    container_name: aqi_api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: postgres:15
+    container_name: aqi_postgres
+    environment:
+      POSTGRES_USER: aqi_user
+      POSTGRES_PASSWORD: aqi_pass
+      POSTGRES_DB: aqi_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

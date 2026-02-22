@@ -1,0 +1,22 @@
+artifact_path: /workspaces/air-quality-intelligence-india/mlruns/0/models/m-de768b3d1bc74de894133974067069d8/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.12.1
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBRegressor
+    model_format: ubj
+    xgb_version: 3.2.0
+mlflow_version: 3.10.0
+model_id: m-de768b3d1bc74de894133974067069d8
+model_size_bytes: 1714899
+model_uuid: m-de768b3d1bc74de894133974067069d8
+prompts: null
+run_id: de9bec1c9e5e4cb88a753b5ee3c00a72
+utc_time_created: '2026-02-22 08:07:56.311797'
